@@ -8,5 +8,7 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('registration.urls')),
-    url(r'^user/', include('user_profiles.urls'))
+    url(r'^user/', include('user_profiles.urls')),
+    url(r'^editor/', include('tutorial.urls')),
+    url(r'^markdown/', include('django_markdown.urls'))
 ]
