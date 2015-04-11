@@ -9,6 +9,7 @@ class Seminar(models.Model):
        title    = models.CharField(max_length=50)
        contents = models.TextField()
 
+
 class Discussions(models.Model):
        author   = models.ForeignKey(User)
        seminar  = models.ForeignKey('Seminar',related_name='seminar')
@@ -16,7 +17,8 @@ class Discussions(models.Model):
        line     = models.IntegerField()
        parent   = models.ForeignKey('self',related_name='discussion_parent',blank=True) # for replies to discussions
 
+
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
-    picture = models.ImageField(upload_to='profile_images', blank=true)
+   # picture = models.ImageField(upload_to='profile_images', blank=true)
 
