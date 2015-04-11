@@ -38,7 +38,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'registration',
+    'django_ace',
 )
+
+INSTALLED_APPS +=('django_markdown')
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
