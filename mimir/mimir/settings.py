@@ -30,7 +30,6 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +40,8 @@ INSTALLED_APPS = (
     'django_ace',
     'django_markdown',
     'tutorial'
+    'user_profiles',
+    'forum',
 )
 
 
