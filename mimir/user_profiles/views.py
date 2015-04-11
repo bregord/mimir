@@ -19,6 +19,7 @@ def profile(request, username):
 def showSeminar(request, username, seminar_title):
 	user = User.objects.get(username=username)
 
-	seminar = Seminar.objects.filter(author=user).filter(for seminar in Seminar if seminar.title==seminar_title)[0]
+	seminars = Seminar.objects.filter(author=user)
+	seminar = seminars.filter(title=seminar_title)[0]
 	context = { 'seminars' : seminars, 'user' : user.username, 'title' : seminar.title}
 	
