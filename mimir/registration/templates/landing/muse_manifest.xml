@@ -1,0 +1,18 @@
+<manifest alg="2" build="11" opt="true" iceEnabled="true" iceMarkupVersion="2" exportTarget="other" resolutions="1x" timestamp="1428747230492">
+  <folder name="css">
+    <file name="site_global.css" crc="4010714174"/>
+    <file name="index.css" crc="3849112459" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="3880902115" ref="index"/>
+    <file name="museutils.js" crc="521960461" ref="index"/>
+    <file name="jquery.watch.js" crc="56779320" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="image.png" crc="389453824" ref="index"/>
+    <file name="u97-6.png" crc="36517246" ref="index"/>
+    <file name="search.svg" crc="4079333664" ref="index"/>
+    <file name="search_poster_.png" crc="276828429" ref="index"/>
+  </folder>
+  <file name="index.html" crc="515162896" mt="1428747219523" redirect="true"/>
+</manifest>
