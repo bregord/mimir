@@ -28,7 +28,7 @@ def register(request, error=""):
                 userProfile.save()
                 user = authenticate(username=username,password=password)
                 login(request,user)
-                return HttpResponseRedirect('/index')
+                return HttpResponseRedirect("/index/")
         else:   
                 return render_to_response('registration.html',{'error':''}, context_instance=RequestContext(request))
                 
