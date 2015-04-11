@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'registration',
     'user_profiles',
+    'forum',
 )
 
 MIDDLEWARE_CLASSES = (

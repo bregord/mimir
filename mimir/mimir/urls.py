@@ -11,5 +11,6 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('registration.urls')),
-    url(r'^user/', include('user_profiles.urls'))
+    url(r'^user/', include('user_profiles.urls')),
+    url(r'^forum/',include('forum.urls'))
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

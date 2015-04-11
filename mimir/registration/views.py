@@ -7,7 +7,7 @@ from registration.models import UserProfile
 
 # Create your views here.
 def index(request):
-        return render_to_response('landing/index.html',{})
+        return render_to_response('index.html')
 
 def register(request, error=""):
         if request.method == "POST":
