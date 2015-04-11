@@ -16,4 +16,7 @@ class Discussions(models.Model):
        line     = models.IntegerField()
        parent   = models.ForeignKey('self',related_name='discussion_parent',blank=True) # for replies to discussions
 
+class UserProfile(models.Model):
+    user = models.OneToOneField(User)
+    picture = models.ImageField(upload_to='profile_images', blank=true)
 
