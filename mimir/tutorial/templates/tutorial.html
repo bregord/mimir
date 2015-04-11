@@ -3,11 +3,12 @@
 
 <html>
         <body>
+        <form action="/markdown/preview/" method="POST"> <!--preview or submit -->
         {% csrf_token %}
-               <textarea name="test" id="new"></textarea>
-			{% markdown_editor "#new" %}
-			{% markdown_media %}
-                </form>
+        <p> Title: <input type="text" name="title"> </p>
+			{{ form }}
+		<input type="submit" value="register">
+
         </body>
 </html>
 

@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'registration',
     'django_ace',
     'django_markdown',
+    'tutorial'
 )
 
 

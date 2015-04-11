@@ -3,8 +3,8 @@ from django_markdown.widgets import MarkdownWidget
 from tutorial.models import editorPage
 
 class editorPageForm(forms.Form):
-    body = forms.CharField(widget = MarkdownWidget(), help_text='Lesson Goes Here')
-    title = forms.CharField(max_length=128, help_text="Title")
+    #title = forms.CharField(max_length=128, help_text="Title")
+    data = forms.CharField(widget = MarkdownWidget())
     class Meta:
         model = editorPage
-        fields = ('body,title,')
+        fields = ('data')
