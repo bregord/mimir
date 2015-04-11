@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('contents', models.TextField()),
                 ('line', models.IntegerField()),
                 ('author', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
-                ('parent', models.ForeignKey(related_name='discussion_parent', blank=True, to='seminars.Discussions')),
+                ('parent', models.ForeignKey(related_name='discussion_parent', blank=True, to='registration.Discussions')),
             ],
         ),
         migrations.CreateModel(
@@ -32,9 +32,16 @@ class Migration(migrations.Migration):
                 ('author', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
             ],
         ),
+        migrations.CreateModel(
+            name='UserProfile',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('user', models.OneToOneField(to=settings.AUTH_USER_MODEL)),
+            ],
+        ),
         migrations.AddField(
             model_name='discussions',
             name='seminar',
-            field=models.ForeignKey(related_name='seminar', to='seminars.Seminar'),
+            field=models.ForeignKey(related_name='seminar', to='registration.Seminar'),
         ),
     ]

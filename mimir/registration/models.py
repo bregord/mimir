@@ -19,6 +19,5 @@ class Discussions(models.Model):
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User)
-   # picture = models.ImageField(upload_to='profile_images', blank=true)
-
+       user = models.OneToOneField(User)
+       picture = models.ImageField(upload_to='profile_images', blank=True,)
