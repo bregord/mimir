@@ -1,5 +1,6 @@
 from django.shortcuts import render, render_to_response
-from registration.models import UserProfile, Seminar
+from registration.models import UserProfile
+from forum.models import Seminar
 from django.contrib.auth.models import User
 from django.template import RequestContext
 
