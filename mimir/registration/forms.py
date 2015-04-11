@@ -7,4 +7,4 @@ class UserForm(forms.Form):
         description  = forms.CharField(label='Describe yourself',widget=forms.Textarea)
         interests    = forms.CharField(label='What are your interests?', help_text="semi-colon separated")
         website      = forms.URLField(label='Your website URL')
-
+        picture      = forms.FileField(label='Profile Picture')

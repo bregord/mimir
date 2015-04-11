@@ -163,8 +163,8 @@
 	z-index: 75;
 	width: 253px;
 	height: 253px;
-	background-color: #000000;
 	position: relative;
+        border-radius: 50%;
 }
 
 #pu145

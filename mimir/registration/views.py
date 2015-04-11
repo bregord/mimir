@@ -4,6 +4,7 @@ from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from registration.models import UserProfile
+import base64
 
 from .forms import *
 
@@ -13,7 +14,7 @@ def index(request):
 
 def register(request, error=""):
         if request.method == "POST":
-                form = UserForm(request.POST) 
+                form = UserForm(request.POST, request.FILES)
                 if form.is_valid():
                         username    = form.cleaned_data['username']
                         password    = form.cleaned_data['password']
@@ -21,22 +22,29 @@ def register(request, error=""):
                         description = form.cleaned_data['description']
                         website     = form.cleaned_data['website']
                         interests   = form.cleaned_data['interests']
+
+                        image64     = base64.b64encode(request.FILES['picture'].read()) 
                         # validate user
-	                user = User.objects.filter(username = username)
-	                if user.exists():
-                                return render_to_response('registration.html',{ 'error' : 'UserProfilename taken!', 'form' : form}, context_instance=RequestContext(request))
-	
-	                user = User.objects.filter(email = email)
-	                if user.exists():
-                                return render_to_response('registration.html',{ 'error' : 'Email taken!', 'form' : form }, context_instance=RequestContext(request))
-	                user = User.objects.create_user(username,email,password,)
-	                user.save()
-	                userProfile = UserProfile(user=user,description=description,website=website,interests=interests)
-	                userProfile.save()
-	                user = authenticate(username=username,password=password)
-	                login(request,user)
-	                return HttpResponseRedirect("/forum/")
+                        try:
+		                user = User.objects.filter(username = username)
+		                #if user.exists():
+	                        #        return render_to_response('registration.html',{ 'form' : form}, context_instance=RequestContext(request))
+		
+		                user = User.objects.filter(email = email)
+		                #if user.exists():
+	                        #        return render_to_response('registration.html',{'form' : form }, context_instance=RequestContext(request))
+		                user = User.objects.create_user(username,email,password)
+		                user.save()
+		                userProfile = UserProfile(picture=image64,user=user,description=description,website=website,interests=interests)
+		                userProfile.save()
+		                user = authenticate(username=username,password=password)
+		                login(request,user)
+		                return HttpResponseRedirect("/forum/")
+                        except IntegrityError:
+                                return  HttpResponseRedirect("/register/")
+                else:
+                        return HttpResponseRedirect("/register/")
         else:   
                 form = UserForm()
-                return render_to_response('registration.html',{'error':'', 'form': form}, context_instance=RequestContext(request))
+                return render_to_response('registration.html',{'form': form}, context_instance=RequestContext(request))
                 

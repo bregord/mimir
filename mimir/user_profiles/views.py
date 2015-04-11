@@ -9,9 +9,9 @@ from django.template import RequestContext
 
 def profile(request, username):
         user = User.objects.get(username=username)
-
+        userProfile = UserProfile.objects.get(user=user)
         seminars = Seminar.objects.all().filter(author=user)
-
-        context = { 'seminars' : seminars, 'user' : user.username}
+        interests = userProfile.interests.split(";")
+        context = { 'seminars' : seminars, 'user' : user, 'interests' : interests, 'userProfile' : userProfile}
         print username
         return render_to_response('user.html', context, context_instance=RequestContext(request))

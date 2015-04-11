@@ -42,24 +42,21 @@ var __adobewebfontsappname__ = "muse";
      </div>
     </div>
     <div class="clearfix colelem" id="u124-4"><!-- content -->
-            <p>{{user}}</p>
+            <p>{{user.username}}</p>
     </div>
     <div class="clearfix colelem" id="ppu133"><!-- group -->
      <div class="clearfix grpelem" id="pu133"><!-- column -->
-      <div class="colelem" id="u133"><!-- simple frame --></div>
+             <img class="colelem" id="u133" src='data:image/png;base64,{{userProfile.picture}}'><!-- simple frame --></div>
       <div class="clearfix colelem" id="pu145"><!-- group -->
        <div class="clip_frame grpelem" id="u145"><!-- image -->
         <img class="block" id="u145_img" src="/static/user_profiles/images/banner.jpg" alt="" width="229" height="44"/>
        </div>
        <div class="clearfix grpelem" id="u141-4"><!-- content -->
-        <p id="u141-2"><span class="Character-Style-2" id="u141">About Me</span></p>
+               <p id="u141-2"><span class="Character-Style-2" id="u141">About Me</span></p>
        </div>
       </div>
       <div class="clearfix colelem" id="u159-9"><!-- content -->
-       <p id="u159-2"><span class="Character-Style-3" id="u159">Hi, I’m interested in blah blah blah. My hobbies are blah blah blah. Clare is love, Clare is life.</span></p>
-       <p id="u159-4"><span class="Character-Style-3" id="u159-3">Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah</span></p>
-       <p id="u159-5">&nbsp;</p>
-       <p id="u159-7"><span class="Character-Style-3" id="u159-6">Contact me at blah blah blah @ blah blah . com</span></p>
+              <p id="u159-2"><span class="Character-Style-3" id="u159">{{userProfile.description}}</span></p>
       </div>
      </div>
      <div class="clearfix grpelem" id="pppu171"><!-- column -->
@@ -69,7 +66,7 @@ var __adobewebfontsappname__ = "muse";
          <img class="block" id="u171_img" src="/static/user_profiles/images/banner.jpg" alt="" width="361" height="44"/>
         </div>
         <div class="clearfix grpelem" id="u173-4"><!-- content -->
-         <p id="u173-2"><span class="Character-Style-2" id="u173">Seminars Watched</span></p>
+         <p id="u173-2"><span class="Character-Style-2" id="u173">Interests</span></p>
         </div>
        </div>
        <div class="clip_frame grpelem" id="u160"><!-- image -->
@@ -109,13 +106,9 @@ var __adobewebfontsappname__ = "muse";
         <p id="u190-2"><span class="Character-Style-3" id="u190">Written by Isabel Lee</span></p>
        </div>
        <div class="clearfix grpelem" id="u175-19"><!-- content -->
-        <p id="u175-2"><span class="Character-Style-2" id="u175">Computer Science</span></p>
-        <p id="u175-4"><span class="Character-Style-2" id="u175-3">Math</span></p>
-        <p id="u175-9"><span class="Character-Style-2" id="u175-8">CSS<br/>Python</span></p>
-        <p id="u175-11"><span class="Character-Style-2" id="u175-10">Blah</span></p>
-        <p id="u175-13"><span class="Character-Style-2" id="u175-12">Blah</span></p>
-        <p id="u175-15"><span class="Character-Style-2" id="u175-14">Blah</span></p>
-        <p id="u175-17"><span class="Character-Style-2" id="u175-16">Blah</span></p>
+               {% for interest in interests %}
+               <p id="u175-2"><span class="Character-Style-2" id="u175">{{interest}}</span></p>
+               {% endfor %}
        </div>
       </div>
      </div>
@@ -144,7 +137,7 @@ var __adobewebfontsappname__ = "muse";
   </div>
   <!-- JS includes -->
   <script type="text/javascript">
-   if (document.location.protocol != 'https:') document.write('\x3Cscript src="/static/user_profiles/http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
 </script>
   <script type="text/javascript">
    window.jQuery || document.write('\x3Cscript src="/static/user_profiles/scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
