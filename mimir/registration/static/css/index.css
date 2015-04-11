@@ -1,0 +1,78 @@
+.version.index /* version checker */
+{
+	color: #0000E5;
+	background-color: #6CCB8B;
+}
+
+.html
+{
+	background-color: #FFFFFF;
+}
+
+#page
+{
+	z-index: 1;
+	width: 1280px;
+	min-height: 1047px;
+	background-image: none;
+	border-style: none;
+	border-color: #000000;
+	background-color: transparent;
+	padding-bottom: 62px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#u75
+{
+	z-index: 2;
+	width: 1480px;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	left: -100px;
+}
+
+#u189
+{
+	z-index: 4;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 595px;
+	left: 1009px;
+}
+
+#u97-6
+{
+	z-index: 5;
+	display: block;
+	vertical-align: top;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 427px;
+	left: 138px;
+}
+
+#u108
+{
+	z-index: 11;
+	width: 674px;
+	height: 2px;
+	background-color: #FFFFFF;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 629px;
+	left: 329px;
+}
+
+body
+{
+	position: relative;
+	min-width: 1280px;
+}
+
+#page .verticalspacer
+{
+	clear: both;
+}
+
