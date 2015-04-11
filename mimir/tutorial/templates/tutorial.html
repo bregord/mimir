@@ -3,16 +3,18 @@
 
 <html>
         <body>
-        <form action="/markdown/preview/" method="POST"><!--preview or submit -->
+        <form action="/markdown/preview/" method="POST"> <!--placeholder={{form | content}}><!--preview or submit -->
         {% csrf_token %}
         <p> Title: <input type="text" name="title"> </p>
        <!-- <form action="/mark" method="POST">--> 
 
 			{{ form }}
 
-			<button type="submit" name="save" formaction="/markdown/preview/">Preview</button>
-			<button type="submit" name="preview" formaction="/editor/">Save</button>
-			<button type="submit" name="index" formaction="/index/">Cancel</button>
+
+
+			<button type="submit" name="save" formaction="/markdown/preview/">Save</button>
+			<button type="submit" name="preview" formaction="/editor/">Preview</button>
+			<button type="submit" name="cancel" formaction="/forum/">Cancel</button>
 		  <!--<input type="submit" value="preview" name="preview">-->
 
 			

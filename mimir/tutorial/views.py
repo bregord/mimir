@@ -7,8 +7,16 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 def editorPage(request):
 	#title = request.POST['title']
+
+	if request.method == "POST":
+        data = UserForm(request.POST)
+		context_dict = {'form': data }# 'preservedText': data}
+
+        return render_to_response('tutorial.html',context_dict, context_instance=RequestContext(request))
+
 	form = forms.editorPageForm()
-	context_dict = {'form': form}
+	content = ''
+	context_dict = {'form': form, 'content': content}
 	return render_to_response('tutorial.html',context_dict, context_instance=RequestContext(request))
    
 
