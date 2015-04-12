@@ -1,7 +1,7 @@
 .version.index /* version checker */
 {
-	color: #0000E5;
-	background-color: #6CCB8B;
+	color: #000017;
+	background-color: #B00383;
 }
 
 .html
@@ -42,13 +42,13 @@
 	left: 1009px;
 }
 
-<<<<<<< HEAD
 #u97-6
 {
 	z-index: 5;
 	display: block;
 	vertical-align: top;
-=======
+}
+
 #u216
 {
 	z-index: 5;
@@ -117,18 +117,18 @@
 	color: #FFFFFF;
 	font-family: lato, sans-serif;
 	font-weight: 300;
->>>>>>> a8d0289a174b427bf1ed5fcb23f2fd8988b7f464
+	z-index: 5;
+	display: block;
+	vertical-align: top;
 	position: relative;
 	margin-right: -10000px;
 	margin-top: 427px;
 	left: 138px;
 }
-
-<<<<<<< HEAD
 #u108
 {
 	z-index: 11;
-=======
+}
 #u97-2
 {
 	font-size: 75px;
@@ -144,7 +144,6 @@
 #u108
 {
 	z-index: 17;
->>>>>>> a8d0289a174b427bf1ed5fcb23f2fd8988b7f464
 	width: 674px;
 	height: 2px;
 	background-color: #FFFFFF;
@@ -165,8 +164,6 @@ body
 	clear: both;
 }
 
-<<<<<<< HEAD
-=======
 .ourButton
 {
         -o-transition:.5s;
@@ -184,5 +181,3 @@ body
         color: rgb((0,0,0);
 }
 
-
->>>>>>> a8d0289a174b427bf1ed5fcb23f2fd8988b7f464
