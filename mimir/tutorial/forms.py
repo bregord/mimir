@@ -11,7 +11,7 @@ class editorPageForm(forms.Form):
     data = forms.CharField(widget = MarkdownWidget())
     class Meta:
         model = editorPage
-        fields = ('Title', 'data')
+        fields = ('title', 'data')
 
 #class MyCustomForm(forms.Form):
  #   content = forms.CharField(widget=MarkdownWidget())

@@ -16,19 +16,21 @@
 		<a><span class="mediabutton"><img src="audio.svg"</span></a>
 		<a><span class="mediabutton" id="submit">Submit</span></a>
 		</div>
-        <form action="/markdown/preview/" id="id_title" method="POST" name="seminar"><!--preview or submit -->
+        <form action="/editor/save/" id="id_title" method="POST" name="seminar"><!--preview or submit -->
         {% csrf_token %}
       
 			
 		<div id="compositionbin">
-		{{ form }}
+		Title: <input type ="text" name="title">
+        Contents: <input type="text" name="input">
 		<div id="guidelines"><h3>Community Guidelines</h3><p>New to markdown? Here's how to work with it:</p></div>
 
-			<button type="submit" name="save" formaction="/markdown/preview/">Preview</button>
-			<button type="submit" name="preview" formaction="/editor/save/">Save</button>
+			<button type="submit" name="preview" formaction="/markdown/preview/">Preview</button>
+			<input type="submit" value="Save">
 			<button type="submit" name="cancel" formaction="/forum/">Cancel</button>
-			<input type="hidden" id="input" name="input" value=''>
-			<input type="hidden" id="title" name="title" value=''>
+			<!--input type="hidden" id="input" name="input" value=''-->
+			<!--input type="hidden" id="title" name="title" value=''-->
+        </form>
 
 		  <!--<input type="submit" value="preview" name="preview">-->
 

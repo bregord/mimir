@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel = "stylesheet" type ="text/css" href="/static/stress/composition.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+
+		<div id="caesura_logo">Caesura</div>
+		<div id="mediabin">
+		<a><span class="mediabutton"><img src="/static/stress/camera.svg"></span></a>
+		<a><span class="mediabutton"><img src="/static/stress/audio.svg"</span></a>
+		<a><span class="mediabutton"><img src="/static/stress/video.svg"</span></a>
+		<a href="javascript: submit_form();" ><span class="mediabutton" id="submit">Submit</span></a>
+		</div>
+		
+		<form id="seminar" name="sem" method="POST" action="/editor/save/">
+			{% csrf_token %}
+		<div id="compositionbin">
+		<input type ="text" name="title" placeholder="Title" class="tIn"><br><br>
+		<textarea placeholder="What do you know about?" name="input" form="seminar"></textarea></div>
+		<div id="guidelines"><h3>Community Guidelines</h3><p>New to markdown? Here's how to work with it:</p></div>
+
+		</form>
+
+		<script type="text/javascript">
+		function submit_form () {
+			document.sem.submit();		
+		}
+		</script>
+
+	</body>
+</html>
