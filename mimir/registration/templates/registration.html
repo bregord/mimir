@@ -2,10 +2,10 @@
 
 <html>
         <body>
-                <center> <font color=#ff0000> {{error}} </font> </center>
-                <form action="/register/" method="POST">
+                <form action="/register/" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form.as_p }}
+                        {{ form.path }}
                         <p> <input type="submit" value="register"> </p>
                 </form>
         </body>

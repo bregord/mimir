@@ -42,20 +42,109 @@
 	left: 1009px;
 }
 
+<<<<<<< HEAD
 #u97-6
 {
 	z-index: 5;
 	display: block;
 	vertical-align: top;
+=======
+#u216
+{
+	z-index: 5;
+	width: 178px;
+	background-color: #DDDDDD;
+	padding-bottom: 11px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 934px;
+	left: 577px;
+}
+
+#u209-4
+{
+	z-index: 18;
+	width: 150px;
+	min-height: 48px;
+	background-color: transparent;
+	line-height: 48px;
+	font-size: 40px;
+	color: #C93846;
+	font-family: lato, sans-serif;
+	font-weight: 300;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 8px;
+	left: 14px;
+}
+
+#u217
+{
+	z-index: 6;
+	width: 120px;
+	background-color: #DDDDDD;
+	padding-bottom: 10px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 836px;
+	left: 606px;
+}
+
+#u218-4
+{
+	z-index: 7;
+	width: 95px;
+	min-height: 42px;
+	background-color: transparent;
+	line-height: 48px;
+	font-size: 40px;
+	color: #C93846;
+	font-family: lato, sans-serif;
+	font-weight: 300;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 9px;
+	left: 13px;
+}
+
+#u97-6
+{
+	z-index: 11;
+	width: 1004px;
+	min-height: 118px;
+	background-color: transparent;
+	text-align: center;
+	color: #FFFFFF;
+	font-family: lato, sans-serif;
+	font-weight: 300;
+>>>>>>> a8d0289a174b427bf1ed5fcb23f2fd8988b7f464
 	position: relative;
 	margin-right: -10000px;
 	margin-top: 427px;
 	left: 138px;
 }
 
+<<<<<<< HEAD
 #u108
 {
 	z-index: 11;
+=======
+#u97-2
+{
+	font-size: 75px;
+	line-height: 90px;
+}
+
+#u97-4
+{
+	font-size: 50px;
+	line-height: 60px;
+}
+
+#u108
+{
+	z-index: 17;
+>>>>>>> a8d0289a174b427bf1ed5fcb23f2fd8988b7f464
 	width: 674px;
 	height: 2px;
 	background-color: #FFFFFF;
@@ -76,3 +165,24 @@ body
 	clear: both;
 }
 
+<<<<<<< HEAD
+=======
+.ourButton
+{
+        -o-transition:.5s;
+        -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
+        overflow: hidden;
+        white-space: nowrap;
+
+}
+
+.ourButton:hover
+{
+        color: rgb((0,0,0);
+}
+
+
+>>>>>>> a8d0289a174b427bf1ed5fcb23f2fd8988b7f464
