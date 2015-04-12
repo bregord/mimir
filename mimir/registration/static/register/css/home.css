@@ -6,7 +6,7 @@
 
 .html
 {
-	background-color: #FFFFFF;
+	background-color: transparent;
 }
 
 #page
@@ -46,7 +46,7 @@
 {
 	z-index: 5;
 	width: 178px;
-	background-color: #DDDDDD;
+	background-color: transparent;
 	padding-bottom: 11px;
 	position: relative;
 	margin-right: -10000px;
@@ -75,7 +75,7 @@
 {
 	z-index: 6;
 	width: 120px;
-	background-color: #DDDDDD;
+	background-color: transparent;
 	padding-bottom: 10px;
 	position: relative;
 	margin-right: -10000px;
@@ -133,13 +133,18 @@
 	z-index: 17;
 	width: 674px;
 	height: 2px;
-	background-color: #FFFFFF;
+	background-color: transparent;
 	position: relative;
 	margin-right: -10000px;
 	margin-top: 629px;
 	left: 329px;
 }
-
+form{
+	background-color:transparent;
+}
+p{
+	background-color: transparent;
+}
 body
 {
 	position: relative;

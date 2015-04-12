@@ -17,7 +17,7 @@
 	background-image: none;
 	border-style: none;
 	border-color: #000000;
-	background-color: transparent;
+	background-color: #FFFFFF;
 	padding-bottom: 62px;
 	margin-left: auto;
 	margin-right: auto;
@@ -27,7 +27,7 @@
 {
 	z-index: 2;
 	width: 1480px;
-	background-color: transparent;
+	background-color: #DDDDDD;
 	position: relative;
 	margin-right: -10000px;
 	left: -100px;
@@ -44,6 +44,7 @@
 
 #u97-6
 {
+	background-color:transparent;
 	z-index: 5;
 	display: block;
 	vertical-align: top;
@@ -66,7 +67,7 @@
 	z-index: 18;
 	width: 150px;
 	min-height: 48px;
-	background-color: transparent;
+	background-color: #DDDDDD;
 	line-height: 48px;
 	font-size: 40px;
 	color: #C93846;
@@ -131,12 +132,14 @@
 }
 #u97-2
 {
+	background-color: transparent;
 	font-size: 75px;
 	line-height: 90px;
 }
 
 #u97-4
 {
+	background-color: transparent;
 	font-size: 50px;
 	line-height: 60px;
 }
@@ -146,7 +149,7 @@
 	z-index: 17;
 	width: 674px;
 	height: 2px;
-	background-color: #FFFFFF;
+	background-color: transparent;
 	position: relative;
 	margin-right: -10000px;
 	margin-top: 629px;
@@ -164,9 +167,6 @@ body
 	clear: both;
 }
 
-
-
-
 .ourButton
 {
         -o-transition:.5s;
@@ -179,13 +179,10 @@ body
 
 }
 
-.ourButton:hover
-{
-        color: rgb(0,0,0);
-}
+
 
 form {
-	background-color: transparent;
+
 	font-family: lato, sans-serif;
 	opacity:0.5;
 
@@ -202,4 +199,12 @@ form {
 	color: white;
 	padding-left: 10px;
 
+}
+#caesura_logo{
+	z-index:100;
+	position: relative;
+	top: 5px;
+	vertical-align: center;
+	width: 330;
+	height:60px;
 }

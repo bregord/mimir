@@ -6,7 +6,7 @@
 
 .html
 {
-	background-color: #FFFFFF;
+	background-color: transparent;
 }
 
 #page
@@ -33,7 +33,7 @@
 	z-index: 9;
 	width: 666px;
 	height: 336px;
-	background-color: #transparent;
+	background-color: transparent;
 	margin-left: 307px;
 	margin-top: 335px;
 	position: relative;
@@ -43,7 +43,7 @@
 {
 	z-index: 4;
 	width: 120px;
-	background-color: #DDDDDD;
+	background-color: transparent;
 	padding-bottom: 9px;
 	margin-left: 580px;
 	margin-top: 36px;
@@ -53,9 +53,9 @@
 #u286-4
 {
 	z-index: 5;
-	width: 95px;
+	width: 105px;
 	min-height: 42px;
-	background-color: transparent;
+	background-color: #DDDDDD;
 	line-height: 48px;
 	font-size: 40px;
 	color: #C93846;
@@ -65,13 +65,15 @@
 	margin-right: -10000px;
 	margin-top: 10px;
 	left: 13px;
+	padding:2px;
+	text-align: center;
 }
 
 #u243
 {
 	z-index: 2;
 	width: 1480px;
-	background-color: #DDDDDD;
+	background-color: transparent;
 	left: -100px;
 	top: -774px;
 	margin-bottom: -774px;
@@ -130,6 +132,9 @@ input
 	border-style: solid;
 	border-color: white;
 	color: white;
+}
+form{
+	background-color: transparent;
 }
 
 
