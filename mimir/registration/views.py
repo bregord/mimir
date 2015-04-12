@@ -55,7 +55,8 @@ def our_login(request):
         if request.method == "POST":
                 username = request.POST['username']
                 password = request.POST['password']
-                if authenticate(username=username,password=password):
+                user = authenticate(username=username,password=password)
+                if user.is_authenticated():
                         login(request,user)
                         return HttpResponseRedirect("/forum/")
                 else:
