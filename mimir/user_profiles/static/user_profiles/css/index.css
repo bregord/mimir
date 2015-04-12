@@ -6,7 +6,7 @@
 
 .html
 {
-	background-color: #FFFFFF;
+	background-color: #DDDDDD;
 }
 
 #page
@@ -163,8 +163,8 @@
 	z-index: 75;
 	width: 253px;
 	height: 253px;
-	background-color: #000000;
 	position: relative;
+        border-radius: 50%;
 }
 
 #pu145
@@ -289,7 +289,7 @@
 	z-index: 2;
 	width: 679px;
 	height: 2px;
-	background-color: #FFFFFF;
+	background-color: #DDDDDD;
 	position: relative;
 	margin-right: -10000px;
 	margin-top: 251px;
@@ -442,6 +442,11 @@
 	margin-bottom: -62px;
 }
 
+#u192
+{
+	margin-bottom: 35px;
+}
+
 #u200-4
 {
 	z-index: 49;
@@ -516,6 +521,7 @@ body
 	min-width: 1280px;
 	padding-top: 36px;
 	padding-bottom: 36px;
+	background-color: #DDDDDD;
 }
 
 #page .verticalspacer
