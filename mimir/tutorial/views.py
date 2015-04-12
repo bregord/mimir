@@ -4,6 +4,7 @@ import forms
 from forum.models import Seminar
 from django.template import RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
+import django.contrib.auth.models.User
 # Create your views here.
 from django.contrib.auth.decorators import login_required
 
@@ -27,10 +28,15 @@ def editorPage(request):
 def savePage(request):
 	if request.method == "POST":
 		seminar = Seminar()
+		if request.user.is_authenticated():
+			username = request.user.username
+			seminar.author = username		
+			seminar.title = request.POST.get("Title")
+			seminar.contents = request.POST.get("input")
+			seminar.date = request.user.date
+			seminar.save()
 
-		seminar.author = request.User
-		seminar.title = request.POST.get("Title")
-		seminar.contents = request.POST.get("input")
-		seminar.date = User.date
+		else:
+			HttpResponseRedirect("/")
 
-		seminar.save()
+		
