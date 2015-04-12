@@ -1,7 +1,7 @@
 from django.shortcuts import render, render_to_response
 from django.conf.urls import url, patterns
 import forms
-from tutorial.models import Seminar
+from forum.models import Seminar
 from django.template import RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
