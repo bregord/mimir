@@ -1,4 +1,4 @@
-.version.index /* version checker */
+.version.home /* version checker */
 {
 	color: #000017;
 	background-color: #B00383;
@@ -40,13 +40,6 @@
 	margin-right: -10000px;
 	margin-top: 595px;
 	left: 1009px;
-}
-
-#u97-6
-{
-	z-index: 5;
-	display: block;
-	vertical-align: top;
 }
 
 #u216
@@ -117,18 +110,12 @@
 	color: #FFFFFF;
 	font-family: lato, sans-serif;
 	font-weight: 300;
-	z-index: 5;
-	display: block;
-	vertical-align: top;
 	position: relative;
 	margin-right: -10000px;
 	margin-top: 427px;
 	left: 138px;
 }
-#u108
-{
-	z-index: 11;
-}
+
 #u97-2
 {
 	font-size: 75px;
@@ -162,67 +149,5 @@ body
 #page .verticalspacer
 {
 	clear: both;
-}
-
-.ourButton
-{
-        -o-transition:.5s;
-        -ms-transition:.5s;
-        -moz-transition:.5s;
-        -webkit-transition:.5s;
-        transition:.5s;
-        overflow: hidden;
-        white-space: nowrap;
-
-}
-
-.ourButton:hover
-{
-        color: rgb((0,0,0);
-#registrar:hover {
-	animation-name: waitChangeColour;
-	animation-duration:1s;
-}
-#login_button:hover {
-	animation-name: waitChangeColour;
-	animation-duration:1s;
-}
-
-@keyframes invertfade{
-	0% {
-		opacity:1;
-	}
-	100%{
-		opacity:0;
-	}
-}
-
-@keyframes waitChangeColour{
-	0%{
-		
-	}
-	50%{
-		color: #DD3333;
-	}
-	100%{
-		color:#FFFFFF;
-	}
-
-
-.ourButton
-{
-        -o-transition:.5s;
-        -ms-transition:.5s;
-        -moz-transition:.5s;
-        -webkit-transition:.5s;
-        transition:.5s;
-        overflow: hidden;
-        white-space: nowrap;
-
-}
-
-.ourButton:hover
-{
-        color: rgb((0,0,0);
 }
 

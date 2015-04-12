@@ -3,8 +3,10 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from django.db import IntegrityError
 from registration.models import UserProfile
 import base64
+
 
 from .forms import *
 
@@ -49,7 +51,7 @@ def register(request, error=""):
                 return render_to_response('registration.html',{'form': form}, context_instance=RequestContext(request))
                
 
-def login(request):
+def our_login(request):
         if request.method == "POST":
                 username = request.POST['username']
                 password = request.POST['password']
