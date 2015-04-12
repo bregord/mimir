@@ -9,22 +9,29 @@
 </head>
 <body>
 
+<h1> {{titleText}}</h1>
+
 <div id="id_data">
 {{ content|markdown }}
 </div>
 
-<form action="/markdown/preview/" id='test' method="POST" placeholder='{{inputText}}'> <!--preview or submit or cancel -->
+<form action="/markdown/preview/" id='test' method="POST"> <!--preview or submit or cancel -->
         {% csrf_token %}
  <!--title here-->
 			{{ form }}
-			<button type="submit" name="save" formaction="/markdown/preview/">Save</button>
+			<button type="submit" name="save" formaction="/editor/save/">Save</button>
 			<button type="submit" name="edit" formaction="/editor/" onclick="getInput()">Edit</button>
 			<button type="submit" name="cancel" formaction="/forum/">Cancel</button>		
 			<input type="hidden" id="input" name="input" value=''>
+			<input type="hidden" id="title" name="title" value=''>
+
 
 		<script>
 				function getInput(){
 				document.getElementById('input').value = '{{inputText}}'//whatever input is.
+				document.getElementById('title').value = '{{titleText}}'
+				//document.getElementById('title').value = '{{descText}}'
+
 				}
 		</script>
 </body>

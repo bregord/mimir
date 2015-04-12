@@ -21,7 +21,9 @@ def preview(request):
 
     content=request.REQUEST.get('data', 'No content posted')
     inputText=request.POST.get('data')
-    context_dict = {'content': content, "inputText":inputText}
+    titleText=request.POST.get('Title')
+    #descText=request.POST.get('description')
+    context_dict = {'content': content, "inputText":inputText, "titleText":titleText}#, "descText":descText}
 
     return render_to_response(settings.MARKDOWN_PREVIEW_TEMPLATE,context_dict, context_instance=RequestContext(request))
     #return render(request, settings.MARKDOWN_PREVIEW_TEMPLATE, context_dict)

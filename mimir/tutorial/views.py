@@ -12,7 +12,9 @@ def editorPage(request):
 
 	if request.method == "POST":
 		data = request.POST.get("input")
-		context_dict = {'form': form,'content': data}
+		title = request.POST.get("Title")
+		#description = request.POST.get("description")
+		context_dict = {'form': form,'content': data, 'title':title}#, "description":description}
 		return render_to_response('tutorial.html',context_dict, context_instance=RequestContext(request))
 
 	context_dict = {'form': form}

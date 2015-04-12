@@ -6,12 +6,12 @@ import tutorial.models
 
 
 class editorPageForm(forms.Form):
-    title = forms.CharField(max_length=128)
-    #content = forms.CharField(widget = forms.Textarea)
+    Title = forms.CharField(max_length=128)
+    #description = forms.CharField(max_length=128)
     data = forms.CharField(widget = MarkdownWidget())
     class Meta:
         model = editorPage
-        fields = ('data')
+        fields = ('Title', 'data')
 
 #class MyCustomForm(forms.Form):
  #   content = forms.CharField(widget=MarkdownWidget())
