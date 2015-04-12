@@ -89,14 +89,14 @@ var __adobewebfontsappname__ = "muse";
       </div>
       <div class="clearfix colelem" id="pu75"><!-- group -->
        <div class="grpelem" id="u75"><!-- simple frame --></div>
-       {% if sem_1 %} <a href="#" > 
+       {% if sem_1 %} <a href="?s={{sem_1.title}}" > 
        <div class="clip_frame clearfix grpelem" id="u176"><!-- image -->
         <div id="u176_clip">
          <img class="position_content" id="u176_img" src="/static/user_profiles/images/bg.jpg" alt="" width="609" height="387"/>
         </div>
        </div>
        </a> {%endif%}
-       {% if sem_2 %}<a href="#" >
+       {% if sem_2 %}<a href="?s={{sem_2.title}}" >
        <div class="clip_frame grpelem" id="u192"><!-- image -->
         <img class="block" id="u192_img" src="/static/user_profiles/images/bg%202.jpg" alt="" width="610" height="324"/>
        </div>
@@ -145,7 +145,7 @@ var __adobewebfontsappname__ = "muse";
       </div>
      </div>
     </div>
-    {% for sem in sems %}<a href="#" >
+    {% for sem in sems %}<a href="?s={{sem.title}}" >
     <div class="clearfix colelem" id="pu198"><!-- group -->
      <div class="clip_frame clearfix grpelem" id="u198"><!-- image -->
       <div id="u198_clip">
