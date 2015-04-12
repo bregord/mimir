@@ -8,6 +8,11 @@ from django.template import RequestContext
 # Create your views here.
 
 def profile(request, username):
+        
+        cUser = request.user
+        if not cUser.is_authenticated():
+            cUser = False
+
         user = User.objects.get(username=username)
         userProfile = UserProfile.objects.get(user=user)
         seminars = Seminar.objects.all().filter(author=user)
@@ -37,5 +42,5 @@ def showSeminar(request, username, seminar_title):
 
 	seminars = Seminar.objects.filter(author=user)
 	seminar = seminars.filter(title=seminar_title)[0]
-	context = { 'seminars' : seminars, 'user' : user.username, 'title' : seminar.title}
+	context = { 'seminars' : seminars, 'user' : user.username, 'title' : seminar.title, 'cUser': cUser}
 	

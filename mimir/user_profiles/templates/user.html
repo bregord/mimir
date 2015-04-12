@@ -30,13 +30,24 @@ var __adobewebfontsappname__ = "muse";
      <div class="clip_frame grpelem" id="u105"><!-- image -->
       <img class="block" id="u105_img" src="/static/user_profiles/images/polygonal%20bg.jpg" alt="" width="1480" height="206"/>
      </div>
-     <a class="nonblock nontext MuseLinkActive clearfix grpelem" id="u113-4" href="/"><!-- content --><p>Home</p></a>
+     <a class="nonblock nontext MuseLinkActive clearfix grpelem" id="u113-4" href="/forum/"><!-- content --><p>Home</p></a>
      <div class="clearfix grpelem" id="u114-4"><!-- content -->
-      <p>Profile</p>
+        {% if cUser %}
+      <a href="/user/{{cUser}}"> <p>Profile</p></a></div>
+    </div><div class="clearfix grpelem" id="u115-4"><a href="/editor" style="text-decoration: none; color: white;" > <p>Publish</p></a>
+      {% else %}
+
+       <p>Profile</p></div><div class="clearfix grpelem" id="u115-4">
+        <a href="/editor" style="text-decoration: none; color: white;" > <p>Publish</p></a>
+       {%endif %}
      </div>
-     <div class="clearfix grpelem" id="u115-4"><!-- content -->
-      <p>Publish</p>
-     </div>
+<!--      <div class="clearfix grpelem" id="u115-4"><!- content 
+       {% if cUser %}
+      <a href="/editor" style="text-decoration: none; color: white;" > <p>Publish</p></a>
+      {% else %}
+        <a onClick="alert('Please log in to publish');" style="text-decoration: none; color: white;" > <p>Publish</p></a>
+       {%endif %}
+     </div> -->
      <div class="clearfix grpelem" id="u104-4"><!-- content -->
       <p>Profile</p>
      </div>
