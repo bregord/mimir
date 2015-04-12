@@ -245,10 +245,6 @@ a.nontext /* used to override default properties of 'a' tag */
 	clear: both;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 66d76be871ca1b760a82fdd25dffe1c1cadab37c
 *:first-child+html .clearfix /* IE7 */
 {
 	zoom: 1;
@@ -556,9 +552,6 @@ p,h1,h2,h3,h4,h5,h6,ol,ul,span.actAsPara /* disable Android font boosting */
 	line-height: 0;
 }
 
-<<<<<<< HEAD
-#u217
-{
 #u217
 {
                 -o-transition:.5s;
