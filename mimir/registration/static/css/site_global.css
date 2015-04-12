@@ -551,4 +551,9 @@ p,h1,h2,h3,h4,h5,h6,ol,ul,span.actAsPara /* disable Android font boosting */
 	font-size: 66%;
 	line-height: 0;
 }
+@font-face {
+    font-family: 'Nexa Light'; /*a name to be used later*/
+    src: url('Nexa Light.otf'); /*URL to font*/
+}
+
 

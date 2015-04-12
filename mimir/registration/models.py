@@ -8,7 +8,7 @@ class UserProfile(models.Model):
 
 
        user        = models.OneToOneField(User)
-       picture     = models.ImageField(upload_to='profile_images', blank=True,)
+       #picture     = models.ImageField(upload_to='profile_images', blank=True,)
        description = models.CharField(max_length=500,blank=True)
        interests   = models.CharField(max_length=200,blank=True)
        website     = models.URLField(max_length=200,blank=True)
