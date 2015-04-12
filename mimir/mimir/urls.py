@@ -13,5 +13,6 @@ urlpatterns = [
     url(r'^user/', include('user_profiles.urls')),
     url(r'^editor/', include('tutorial.urls')),
     url(r'^markdown/', include('django_markdown.urls')),
-    url(r'^forum/',include('forum.urls'))
+    url(r'^forum/',include('forum.urls')),
+    url(r'^seminars/',include('seminars.urls')), 
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
