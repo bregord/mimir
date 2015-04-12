@@ -81,12 +81,6 @@ body
 	body { text-rendering:auto; }
 }
 
-a
-{
-	color: inherit;
-	text-decoration: inherit;
-}
-
 a:link
 {
 	color: #0000FF;
@@ -135,6 +129,35 @@ a.nontext /* used to override default properties of 'a' tag */
 	text-transform: none;
 	vertical-align: 0px;
 	padding: 0px;
+}
+
+.Character-Style
+{
+	font-family: lato, sans-serif;
+	font-size: 50px;
+	font-weight: 300;
+}
+
+.Character-Style-1
+{
+	font-family: lato, sans-serif;
+	font-size: 35px;
+	font-weight: 300;
+}
+
+.Character-Style-2
+{
+	font-family: lato, sans-serif;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.Character-Style-3
+{
+	color: #FFFFFF;
+	font-family: lato, sans-serif;
+	font-size: 30px;
+	font-weight: 300;
 }
 
 .list0 li:before
@@ -550,4 +573,3 @@ p,h1,h2,h3,h4,h5,h6,ol,ul,span.actAsPara /* disable Android font boosting */
 	font-size: 66%;
 	line-height: 0;
 }
-
