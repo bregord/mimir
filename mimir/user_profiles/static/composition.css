@@ -1,0 +1,147 @@
+.version.index /* version checker */
+{
+	color: #0000E5;
+	background-color: #6CCB8B;
+}
+
+.html
+{
+	background-color: #FFFFFF;
+	font-family: Lato;
+}
+
+
+#guidelines{
+	font-family: Lato;
+	width:20%;
+	float:right;
+	padding: 0px;
+	position: fixed;
+	right: 50px;
+	color: white;
+	height: 100px;
+}
+
+#submit{
+	height: 40px;
+	width:80px;
+	border-radius: 0%;
+	font-family: Lato;
+	font-size: 20px;
+	background-color: #333333;
+	color: white;
+	position: absolute;
+	z-index: 20;
+	left: 345px;
+	text-align: center;
+	top: 55px;
+	opacity:.6;
+	border-color: #333333;
+	border:none;
+}
+
+
+#mediabin
+{
+	top-margin: 240px;
+	height: 60px;
+	width: 300px;
+	height: 30px;
+	opacity: 1;
+	position:absolute;
+	top: 100px;
+	margin-left: 220px;
+	margin-right: auto;
+}
+.mediabutton
+{
+	height: 80%;
+	width: 80px;
+	background-color: #333333;
+	opacity: 0.5;
+	font-family: Lato;
+	color: white;
+	position:relative;
+	float:right;
+	margin-right: 5px;
+	margin-left: 5px;
+	text-align: center;
+	vertical-align: bottom;
+	vertical-align: text-bottom;
+	border-width: 3px;
+	border-color: #888888;
+
+}
+
+textarea{
+	font-family: Lato;
+	z-index : 500;
+	width: 800px;
+	height : 600px;
+	opacity : 0.8;
+	overflow: auto;
+	left:50px;
+	float:left;
+	background-color:#222222;
+	color: white;
+	margin-top: 10%;
+	position:absolute;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 50%;
+	padding: 3px;
+
+}
+#caesura_logo
+{	
+	font-family: Lato;
+	padding: 10px;
+	height: 50px;
+	font-size: 50px;
+	width: 50px;
+	float: left;
+	color: white;
+	position: fixed;
+
+}
+body
+{
+	position: relative;
+	min-width: 1280px;
+	background-image: url(backgroundpic.jpg);
+	background-repeat: repeat;
+	background-color: #4A1027;
+}
+
+#page .verticalspacer
+{
+	clear: both;
+}
+
+
+a:hover{
+	animation-duration: 1s;
+	animation-name: changeColour;
+	color:#FFFFFF;
+	opacity:1;
+
+}
+
+@keyframes changeColour {
+  0% {
+    opacity: 1;
+    color: #AA0000;
+  }
+
+  30% {
+  	color: #AAAA00;
+  }
+  60% {
+    opacity: 1;
+    color:#AAAAEE;
+  }
+  100% {
+    color: #FFFFFF;
+  }
+}
+

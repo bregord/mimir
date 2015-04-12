@@ -15,3 +15,11 @@ def profile(request, username):
         context = { 'seminars' : seminars, 'user' : user.username}
         print username
         return render_to_response('user.html', context, context_instance=RequestContext(request))
+
+def showSeminar(request, username, seminar_title):
+	user = User.objects.get(username=username)
+
+	seminars = Seminar.objects.filter(author=user)
+	seminar = seminars.filter(title=seminar_title)[0]
+	context = { 'seminars' : seminars, 'user' : user.username, 'title' : seminar.title}
+	
