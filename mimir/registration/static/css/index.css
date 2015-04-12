@@ -154,3 +154,33 @@ body
 	clear: both;
 }
 
+#registrar:hover {
+	animation-name: waitChangeColour;
+	animation-duration:1s;
+}
+#login_button:hover {
+	animation-name: waitChangeColour;
+	animation-duration:1s;
+}
+
+@keyframes invertfade{
+	0% {
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+	}
+}
+
+@keyframes waitChangeColour{
+	0%{
+		
+	}
+	50%{
+		color: #DD3333;
+	}
+	100%{
+		color:#FFFFFF;
+	}
+}
+
