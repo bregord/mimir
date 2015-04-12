@@ -1,0 +1,33 @@
+#u313-4,#u314-4,#u315-4
+{
+	background-color: transparent;
+	line-height: 48px;
+	font-size: 40px;
+	color: #FFFFFF;
+	font-family: lato, sans-serif;
+	font-weight: 300;
+	position: relative;
+}
+
+#u311,#u319-4
+{
+	background-color: transparent;
+	position: relative;
+}
+
+#u319-2
+{
+	line-height: 0px;/* 0 for mixed font sized paras; applied on spans instead */
+}
+
+#u319
+{
+	font-size: 100px;
+	line-height: 120px;
+}
+
+#u417
+{
+	background-color: #DDDDDD;
+}
+
