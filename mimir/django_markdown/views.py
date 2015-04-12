@@ -1,6 +1,8 @@
 """ Supports preview. """
 from django.core.files.storage import default_storage
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
+from django.template import RequestContext
+
 
 from . import settings
 
@@ -17,8 +19,11 @@ def preview(request):
             from django.contrib.auth.views import redirect_to_login
             return redirect_to_login(request.get_full_path())
 
-    return render(
-        request, settings.MARKDOWN_PREVIEW_TEMPLATE, dict(
-            content=request.REQUEST.get('data', 'No content posted'),
-            css=settings.MARKDOWN_STYLE
-        ))
+    content=request.REQUEST.get('data', 'No content posted')
+    inputText=request.POST.get('data')
+    titleText=request.POST.get('Title')
+    #descText=request.POST.get('description')
+    context_dict = {'content': content, "inputText":inputText, "titleText":titleText}#, "descText":descText}
+
+    return render_to_response(settings.MARKDOWN_PREVIEW_TEMPLATE,context_dict, context_instance=RequestContext(request))
+    #return render(request, settings.MARKDOWN_PREVIEW_TEMPLATE, context_dict)

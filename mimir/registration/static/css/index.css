@@ -42,6 +42,13 @@
 	left: 1009px;
 }
 
+#u97-6
+{
+	z-index: 5;
+	display: block;
+	vertical-align: top;
+}
+
 #u216
 {
 	z-index: 5;
@@ -118,7 +125,10 @@
 	margin-top: 427px;
 	left: 138px;
 }
-
+#u108
+{
+	z-index: 11;
+}
 #u97-2
 {
 	font-size: 75px;
@@ -182,5 +192,21 @@ body
 	100%{
 		color:#FFFFFF;
 	}
+
+.ourButton
+{
+        -o-transition:.5s;
+        -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
+        overflow: hidden;
+        white-space: nowrap;
+
+}
+
+.ourButton:hover
+{
+        color: rgb((0,0,0);
 }
 

@@ -38,10 +38,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'registration',
+    'django_ace',
+    'django_markdown',
+    'tutorial',
     'user_profiles',
     'forum',
-    'django_markdown',
-    'tutorial'
 )
 
 

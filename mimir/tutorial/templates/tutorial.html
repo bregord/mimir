@@ -1,21 +1,26 @@
 <DOCTYPE html>
 {% load django_markdown %}
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <html>
         <body>
-        <form action="/markdown/preview/" method="POST"><!--preview or submit -->
+        <form action="/markdown/preview/" id="id_title" method="POST" ><!--preview or submit -->
         {% csrf_token %}
-        <p> Title: <input type="text" name="title"> </p>
-       <!-- <form action="/mark" method="POST">--> 
-
+      
 			{{ form }}
-
+	
 			<button type="submit" name="save" formaction="/markdown/preview/">Preview</button>
 			<button type="submit" name="preview" formaction="/editor/">Save</button>
-			<button type="submit" name="index" formaction="/index/">Cancel</button>
+			<button type="submit" name="cancel" formaction="/forum/">Cancel</button>
+			<input type="hidden" id="input" name="input" value=''>
+			<input type="hidden" id="title" name="title" value=''>
+
 		  <!--<input type="submit" value="preview" name="preview">-->
 
-			
+<script type="text/javascript">
+
+document.getElementById('id_data').value  = '{{content}}'
+document.getElementById('id_Title').value  = '{{title}}'
+</script>
 
         </body>
 </html>
