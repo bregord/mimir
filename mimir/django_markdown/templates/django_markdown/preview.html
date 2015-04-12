@@ -1,0 +1,27 @@
+{% load  django_markdown django_markdown_static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<base target="_blank">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>markItUp! preview</title>
+<link rel="stylesheet" type="text/css" href="{% static css %}" />
+</head>
+<body>
+
+<h1> HERE IT IS </h1>
+
+{{ content|markdown }}
+
+<form action="/markdown/preview/" method="POST"> <!--preview or submit or cancel -->
+        {% csrf_token %}
+ <!--title here-->
+			{{ form }}
+
+			<button type="submit" name="save" formaction="/markdown/preview/">Preview</button>
+			<button type="submit" name="preview" formaction="/editor/">Save</button>
+
+</body>
+</html>
+

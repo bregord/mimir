@@ -1,0 +1,23 @@
+<DOCTYPE html>
+{% load django_markdown %}
+
+<html>
+        <body>
+        <form action="/markdown/preview/" method="POST"><!--preview or submit -->
+        {% csrf_token %}
+        <p> Title: <input type="text" name="title"> </p>
+       <!-- <form action="/mark" method="POST">--> 
+
+			{{ form }}
+
+			<button type="submit" name="save" formaction="/markdown/preview/">Preview</button>
+			<button type="submit" name="preview" formaction="/editor/">Save</button>
+			<button type="submit" name="index" formaction="/index/">Cancel</button>
+		  <!--<input type="submit" value="preview" name="preview">-->
+
+			
+
+        </body>
+</html>
+
+

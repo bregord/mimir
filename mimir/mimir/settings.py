@@ -40,7 +40,10 @@ INSTALLED_APPS = (
     'registration',
     'user_profiles',
     'forum',
+    'django_markdown',
+    'tutorial'
 )
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
