@@ -47,4 +47,16 @@ def register(request, error=""):
         else:   
                 form = UserForm()
                 return render_to_response('registration.html',{'form': form}, context_instance=RequestContext(request))
-                
+               
+
+def login(request):
+        if request.method == "POST":
+                username = request.POST['username']
+                password = request.POST['password']
+                if authenticate(username=username,password=password):
+                        login(request,user)
+                        return HttpResponseRedirect("/forum/")
+                else:
+                        return HttpResponseRedirect("/login/")
+        else:
+                return render_to_response('login.html',context_instance=RequestContext(request))
