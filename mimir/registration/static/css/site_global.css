@@ -245,7 +245,6 @@ a.nontext /* used to override default properties of 'a' tag */
 	clear: both;
 }
 
-
 *:first-child+html .clearfix /* IE7 */
 {
 	zoom: 1;
@@ -553,22 +552,3 @@ p,h1,h2,h3,h4,h5,h6,ol,ul,span.actAsPara /* disable Android font boosting */
 	line-height: 0;
 }
 
-#u217
-{
-#u217
-{
-                -o-transition:.5s;
-                        -ms-transition:.5s;
-                                -moz-transition:.5s;
-                                        -webkit-transition:.5s;
-                                                transition:.5s;
-                                                        overflow: hidden;
-                                                                white-space: nowrap;
-
-                                                        }
-
-
-#u217:hover
-{
-        opacity: 0;
-}

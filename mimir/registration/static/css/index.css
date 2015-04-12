@@ -110,6 +110,9 @@
 	color: #FFFFFF;
 	font-family: lato, sans-serif;
 	font-weight: 300;
+	z-index: 5;
+	display: block;
+	vertical-align: top;
 	position: relative;
 	margin-right: -10000px;
 	margin-top: 427px;
@@ -150,22 +153,4 @@ body
 {
 	clear: both;
 }
-
-.ourButton
-{
-        -o-transition:.5s;
-        -ms-transition:.5s;
-        -moz-transition:.5s;
-        -webkit-transition:.5s;
-        transition:.5s;
-        overflow: hidden;
-        white-space: nowrap;
-
-}
-
-.ourButton:hover
-{
-        color: rgb((0,0,0);
-}
-
 
