@@ -32,11 +32,15 @@ var __adobewebfontsappname__ = "muse";
      <div class="clip_frame grpelem" id="u311"><!-- image -->
       <img class="block" id="u311_img" src="/static/forum/images/polygonal%20bg.jpg" alt="" width="1480" height="206"/>
      </div>
-     <div class="clearfix grpelem" id="u313-4"><!-- content -->
-      <a href="/"><p>Home</p></a>
-     </div>
+     <a href="/"><div class="clearfix grpelem" id="u313-4"><!-- content -->
+      <p>Home</p>
+     </div></a>
      <div class="clearfix grpelem" id="u314-4"><!-- content -->
+      {% if user %}
       <a href="/user/{{user}}"> <p>Profile</p></a>
+      {% else %}
+       <p>Profile</p>
+       {%endif %}
      </div>
      <div class="clearfix grpelem" id="u315-4"><!-- content -->
       <p>Publish</p>
@@ -44,14 +48,22 @@ var __adobewebfontsappname__ = "muse";
      <div class="clip_frame grpelem" id="u448"><!-- image -->
       <img class="block" id="u448_img" src="/static/forum/images/polygonal%20bg.jpg" alt="" width="1480" height="206"/>
      </div>
-     <div class="clearfix grpelem" id="u442-4"><!-- content -->
+     <a href="#"><div class="clearfix grpelem" id="u442-4"><!-- content -->
       <p>Home</p>
-     </div>
+     </div></a>
      <div class="clearfix grpelem" id="u451-4"><!-- content -->
-      <p>Profile</p>
+            {% if user %}
+      <a href="/user/{{user}}" style="text-decoration: none; color: white;" > <p>Profile</p></a>
+      {% else %}
+       <p>Profile</p>
+       {%endif %}
      </div>
      <div class="clearfix grpelem" id="u452-4"><!-- content -->
-      <p>Publish</p>
+      {% if user %}
+      <a href="/editor" style="text-decoration: none; color: white;" > <p>Publish</p></a>
+      {% else %}
+        <a onClick="alert('Please log in to publish');" style="text-decoration: none; color: white;" > <p>Publish</p></a>
+       {%endif %}
      </div>
      <div class="clearfix grpelem" id="u319-4"><!-- content -->
       <p id="u319-2"><span class="Character-Style-3" style=" white-space: nowrap;overflow: hidden;"  id="u319">Forum</span></p>
@@ -112,7 +124,7 @@ var __adobewebfontsappname__ = "muse";
   </div>
   <!-- JS includes -->
   <script type="text/javascript">
-   if (document.location.protocol != 'https:') document.write('\x3Cscript src="/static/forum/http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+   if (document.location.protocol != 'https:') document.write('\x3Cscript src=" http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
 </script>
   <script type="text/javascript">
    window.jQuery || document.write('\x3Cscript src="/static/forum/scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
