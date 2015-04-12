@@ -5,6 +5,22 @@ from django.contrib.auth.models import User
 from django.template import RequestContext
 
 
+import mistune
+from pygments import highlight
+from pygments.lexers import get_lexer_by_name
+from pygments.formatters import HtmlFormatter
+
+class MyRenderer(mistune.Renderer):
+    def block_code(self, code, lang):
+        if not lang:
+            return '\n<pre><code>%s</code></pre>\n' % \
+                mistune.escape(code.strip())
+        lexer = get_lexer_by_name(lang, stripall=True)
+        formatter = HtmlFormatter()
+        return highlight(code, lexer, formatter)
+
+
+
 # Create your views here.
 
 def profile(request, username):
@@ -39,7 +55,8 @@ def show(request, username, seminar_title):
 	user = User.objects.get(username=username)
 	seminars = Seminar.objects.filter(author=user)
 	seminar = [ seminar for seminar in seminars if seminar.title == seminar_title ][0]
-
-	context = { 'seminar' : seminar }
+        renderer = MyRenderer()
+        md = mistune.Markdown(renderer=renderer)
+	context = { 'seminar' : seminar , 'contents' : md.render(seminar.contents) }
         return render_to_response('show.html', context, context_instance=RequestContext(request))
 	

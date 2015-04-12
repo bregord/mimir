@@ -39,7 +39,7 @@ def savePage(request):
 			seminar.save()
 			print "Title"
 			print title
-			return HttpResponseRedirect("/user/{0}/{1}/".format(username,title))
+			return HttpResponseRedirect("/user/{0}/?s={1}".format(username,title))
 
 		else:
 			return HttpResponseRedirect("/")
