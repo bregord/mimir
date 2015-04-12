@@ -3,25 +3,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<base target="_blank">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>markItUp! preview</title>
+<title>Caesura</title>
 <link rel="stylesheet" type="text/css" href="{% static css %}" />
 </head>
 <body>
 
-<h1> HERE IT IS </h1>
-
+<div id="id_data">
 {{ content|markdown }}
+</div>
 
-<form action="/markdown/preview/" method="POST"> <!--preview or submit or cancel -->
+<form action="/markdown/preview/" id='test' method="POST" placeholder='{{inputText}}'> <!--preview or submit or cancel -->
         {% csrf_token %}
  <!--title here-->
 			{{ form }}
-
 			<button type="submit" name="save" formaction="/markdown/preview/">Save</button>
-			<button type="submit" name="edit" formaction="/editor/">Edit</button>
-			<button type="submit" name="cancel" formaction="/forum/">Cancel</button>
+			<button type="submit" name="edit" formaction="/editor/" onclick="getInput()">Edit</button>
+			<button type="submit" name="cancel" formaction="/forum/">Cancel</button>		
+			<input type="hidden" id="input" name="input" value=''>
+
+		<script>
+				function getInput(){
+				document.getElementById('input').value = '{{inputText}}'//whatever input is.
+				}
+		</script>
 </body>
 </html>
 
