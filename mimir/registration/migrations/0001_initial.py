@@ -13,35 +13,14 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Discussions',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('contents', models.TextField()),
-                ('line', models.IntegerField()),
-                ('author', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
-                ('parent', models.ForeignKey(related_name='discussion_parent', blank=True, to='registration.Discussions')),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Seminar',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('topic', models.CharField(max_length=300)),
-                ('title', models.CharField(max_length=50)),
-                ('contents', models.TextField()),
-                ('author', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
-            ],
-        ),
-        migrations.CreateModel(
             name='UserProfile',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('picture', models.CharField(max_length=10000)),
+                ('description', models.CharField(max_length=500, blank=True)),
+                ('interests', models.CharField(max_length=200, blank=True)),
+                ('website', models.URLField(blank=True)),
                 ('user', models.OneToOneField(to=settings.AUTH_USER_MODEL)),
             ],
-        ),
-        migrations.AddField(
-            model_name='discussions',
-            name='seminar',
-            field=models.ForeignKey(related_name='seminar', to='registration.Seminar'),
         ),
     ]
