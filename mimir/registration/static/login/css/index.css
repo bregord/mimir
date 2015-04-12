@@ -1,0 +1,91 @@
+.version.index /* version checker */
+{
+	color: #0000E2;
+	background-color: #996349;
+}
+
+.html
+{
+	background-color: #FFFFFF;
+}
+
+#page
+{
+	z-index: 1;
+	width: 1280px;
+	min-height: 1109px;
+	background-image: none;
+	border-style: none;
+	border-color: #000000;
+	background-color: transparent;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#page_position_content
+{
+	margin-bottom: -1px;
+	width: 0.01px;
+}
+
+#u285
+{
+	z-index: 9;
+	width: 666px;
+	height: 336px;
+	background-color: #FFFFFF;
+	margin-left: 307px;
+	margin-top: 335px;
+	position: relative;
+}
+
+#u287
+{
+	z-index: 4;
+	width: 120px;
+	background-color: #DDDDDD;
+	padding-bottom: 9px;
+	margin-left: 580px;
+	margin-top: 36px;
+	position: relative;
+}
+
+#u286-4
+{
+	z-index: 5;
+	width: 95px;
+	min-height: 42px;
+	background-color: transparent;
+	line-height: 48px;
+	font-size: 40px;
+	color: #C93846;
+	font-family: lato, sans-serif;
+	font-weight: 300;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 10px;
+	left: 13px;
+}
+
+#u243
+{
+	z-index: 2;
+	width: 1480px;
+	background-color: transparent;
+	left: -100px;
+	top: -774px;
+	margin-bottom: -774px;
+	position: relative;
+}
+
+body
+{
+	position: relative;
+	min-width: 1280px;
+}
+
+#page .verticalspacer
+{
+	clear: both;
+}
+
