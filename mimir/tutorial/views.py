@@ -4,7 +4,10 @@ import forms
 from django.template import RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
+from django.contrib.auth.decorators import login_required
 
+
+#@login_required
 def editorPage(request):
 	#title = request.POST['title']
 
