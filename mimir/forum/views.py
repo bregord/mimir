@@ -15,4 +15,4 @@ def index(request):
         user = request.user
         seminars = [ SemTem(seminar.author,seminar.title,seminar.contents[:1233], seminar.date) for seminar in Seminar.objects.all() ]
         
-        return render_to_response('forum.html', {'seminars' : seminars} )
+        return render_to_response('forum.html', {'seminars' : seminars, 'user': user} )
