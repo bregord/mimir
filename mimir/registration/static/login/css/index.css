@@ -33,7 +33,7 @@
 	z-index: 9;
 	width: 666px;
 	height: 336px;
-	background-color: #FFFFFF;
+	background-color: #transparent;
 	margin-left: 307px;
 	margin-top: 335px;
 	position: relative;
@@ -71,7 +71,7 @@
 {
 	z-index: 2;
 	width: 1480px;
-	background-color: transparent;
+	background-color: #DDDDDD;
 	left: -100px;
 	top: -774px;
 	margin-bottom: -774px;
@@ -88,4 +88,48 @@ body
 {
 	clear: both;
 }
+
+.prompter{
+	width:100%;
+	height:100px;
+	font-family: Lato;
+	background-color: transparent;
+	float:left;
+	font-size: 30px;
+	margin-top: 10px;
+
+}
+.cInput{
+	width: 100%;
+	height: 50px;
+	font-size: 30px;
+	font-family: Lato;
+	font-size: 30px;
+	background-color: transparent;
+	float:right;
+	color: white;
+	padding-left: 10px;
+
+}
+.inputLine{
+	width: 100%;
+}
+
+hr
+{
+	padding-bottom: 3;
+	background-color: #DDDDDD;
+	color: #DDDDDD;
+	width: 200px;
+	height: 2px;
+}
+input 
+{
+	background-color: transparent;
+	border-bottom: 2px;
+	border-style: solid;
+	border-color: white;
+	color: white;
+}
+
 
