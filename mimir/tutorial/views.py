@@ -1,6 +1,7 @@
 from django.shortcuts import render, render_to_response
 from django.conf.urls import url, patterns
 import forms
+from datetime
 from forum.models import Seminar
 from django.template import RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
@@ -31,9 +32,10 @@ def savePage(request):
 		if request.user.is_authenticated():
 			username = request.user
 			seminar.author = username		
-			seminar.title = request.POST.get("Title")
+			seminar.title = request.POST.get("title")
 			seminar.contents = request.POST.get("input")
-			seminar.date = request.user.date
+			today = datetime.datetime.today() 
+			seminar.date =  today.strftime('%Y%m%d')
 			seminar.save()
 			return HttpResponseRedirect("/username/title/")
 
